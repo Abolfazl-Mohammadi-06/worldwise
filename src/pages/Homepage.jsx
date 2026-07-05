@@ -1,6 +1,16 @@
+import PageNav from "../components/PageNav.jsx";
+
 function Homepage() {
     return (
-        <div>WorldWise</div>
+        <div>
+            <PageNav/>
+            <h1>
+                WorldWise
+            </h1>
+
+            {/*<Link to="/pricing">pricing</Link>*/}
+
+        </div>
     )
 }
 
