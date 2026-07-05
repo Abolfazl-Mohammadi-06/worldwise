@@ -1,4 +1,5 @@
 import PageNav from "../components/PageNav.jsx";
+import {Link} from "react-router-dom";
 
 function Homepage() {
     return (
@@ -8,7 +9,7 @@ function Homepage() {
                 WorldWise
             </h1>
 
-            {/*<Link to="/pricing">pricing</Link>*/}
+            <Link to="/app">go to the app!</Link>
 
         </div>
     )
