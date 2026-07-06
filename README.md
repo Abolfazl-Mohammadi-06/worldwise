@@ -26,7 +26,7 @@ WorldWise is a React application that helps users explore and organize cities th
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/worldwise.git
+git clone https://github.com/Abolfazl-Mohammadi-06/worldwise.git
 cd worldwise
 ```
 
