@@ -4,7 +4,6 @@ import {useState} from "react";
 
 import styles from "./Form.module.css";
 import Button from "./Button.jsx";
-import {useNavigate} from "react-router-dom";
 import BackButton from "./BackButton.jsx";
 
 export function convertToEmoji(countryCode) {
@@ -17,10 +16,10 @@ export function convertToEmoji(countryCode) {
 
 function Form() {
 
-    const navigate = useNavigate();
+
 
     const [cityName, setCityName] = useState("");
-    const [country, setCountry] = useState("");
+    // const [country, setCountry] = useState("");
     const [date, setDate] = useState(new Date());
     const [notes, setNotes] = useState("");
 
