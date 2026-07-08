@@ -6,35 +6,16 @@ import PageNotFound from "./pages/PageNotFound.jsx";
 import AppLayout from "./pages/AppLayout.jsx";
 import Login from "./pages/Login.jsx";
 import CityList from "./components/CityList.jsx";
-import {useEffect, useState} from "react";
 import CountriesList from "./components/CountriesList.jsx";
 import City from "./components/City.jsx";
 import Form from "./components/Form.jsx";
+import {CitiesProvider} from "./context/CitiesContext.jsx";
 
-const BASE_URL = "http://localhost:9000";
 export default function App() {
 
-    const [cities, setCities] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-
-    useEffect(function () {
-        async function fetchCities() {
-            try {
-                setIsLoading(true);
-                const res = await fetch(`${BASE_URL}/cities`);
-                const data = await res.json();
-                setCities(data);
-            } catch {
-                alert("Failed to fetch cities.");
-            } finally {
-                setIsLoading(false);
-            }
-        }
-
-        fetchCities();
-    }, []);
 
     return (
+        <CitiesProvider>
         <BrowserRouter>
             <Routes>
                 <Route index element={<Homepage/>}/>
@@ -44,15 +25,16 @@ export default function App() {
 
                 <Route path="app" element={<AppLayout/>}>
                     <Route index element={<Navigate replace to="cities"/>}/>
-                    <Route index path="cities" element={<CityList cities={cities} isLoading={isLoading}/>}/>
+                    <Route index path="cities" element={<CityList />}/>
                     <Route path="cities/:id" element={<City/>}/>
-                    <Route path="countries" element={<CountriesList cities={cities} isLoading={isLoading}/>}/>
+                    <Route path="countries" element={<CountriesList />}/>
                     <Route path="form" element={<Form/>}/>
                 </Route>
 
                 <Route path="*" element={<PageNotFound/>}/>
             </Routes>
         </BrowserRouter>
+        </CitiesProvider>
     );
 }
 //E17
