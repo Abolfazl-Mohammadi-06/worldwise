@@ -21,14 +21,14 @@ function reducer(state, action) {
             return {...state, isLoading: false, cities: action.payload};
         case 'city/loaded':
             return {...state, isLoading: false, currentCity: action.payload};
-        case "city-created":
+        case "city/created":
             return {
                 ...state,
                 isLoading: false,
                 cities: [...state.cities, action.payload],
                 currentCity: action.payload
             };
-        case "city-deleted":
+        case "city/deleted":
             return {
                 ...state,
                 isLoading: false,
