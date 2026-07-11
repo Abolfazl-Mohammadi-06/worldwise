@@ -23,6 +23,18 @@
         "lng": -3.7133789062500004
       },
       "id": 17806751
+    },
+    {
+      "cityName": "Santiago-Pontones",
+      "country": "Spain",
+      "emoji": "https://flagcdn.com/es.svg",
+      "date": "2026-07-11T13:33:51.686Z",
+      "notes": "",
+      "position": {
+        "lat": "38.037200238117286",
+        "lng": "-2.7246093750000004"
+      },
+      "id": 73930386
     }
   ]
 }

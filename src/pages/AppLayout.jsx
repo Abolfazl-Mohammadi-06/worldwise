@@ -8,8 +8,8 @@ function AppLayout() {
     const { isAuthenticated} = useAuth()
     return (<div className={style.app}>
         <Sidebar/>
-        <Map/>
-        {isAuthenticated && <User/>}
+        <Map>{isAuthenticated && <User/>}</Map>
+
     </div>)
 }
 

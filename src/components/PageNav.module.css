@@ -11,6 +11,19 @@
   gap: 4rem;
 }
 
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nav ul {
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 .nav a:link,
 .nav a:visited {
   text-decoration: none;

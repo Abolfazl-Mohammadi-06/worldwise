@@ -7,7 +7,7 @@ import {useGeolocation} from "../hooks/useGeolocation.js";
 import Button from "./Button.jsx";
 import {useUrlPosition} from "../hooks/useUrlPosition.js";
 
-function Map() {
+function Map({children}) {
     const {cities} = useCities();
     const [mapPosition, setMapPosition] = useState([40, 0])
 
@@ -28,6 +28,7 @@ function Map() {
 
     return (
         <div className={style.mapContainer}>
+            {children}
             {!geoLocationPosition && <Button type="position"
                                              onClick={getPosition}>{isLoadingPosition ? "Loading...." : "Use your position"}
             </Button>}
