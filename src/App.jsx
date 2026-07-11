@@ -11,6 +11,7 @@ import City from "./components/City.jsx";
 import Form from "./components/Form.jsx";
 import {CitiesProvider} from "./context/CitiesContext.jsx";
 import {AuthProvider} from "./context/FakeAuthContext.jsx";
+import ProtectedRoute from "./pages/ProtectedRoute.jsx";
 
 export default function App() {
 
@@ -25,7 +26,7 @@ export default function App() {
                         <Route path="Pricing" element={<Pricing/>}/>
                         <Route path="login" element={<Login/>}/>
 
-                        <Route path="app" element={<AppLayout/>}>
+                        <Route path="app" element={<ProtectedRoute><AppLayout/></ProtectedRoute>}>
                             <Route index element={<Navigate replace to="cities"/>}/>
                             <Route index path="cities" element={<CityList/>}/>
                             <Route path="cities/:id" element={<City/>}/>
@@ -40,4 +41,4 @@ export default function App() {
         </AuthProvider>
     );
 }
-//E20 it was not din yet I was in 5:22
+//E20 it is not done. I was in 5:22
