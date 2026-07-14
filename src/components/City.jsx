@@ -1,5 +1,5 @@
 import styles from "./City.module.css";
-import { useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {useEffect} from "react";
 import {useCities} from "../context/CitiesContext.jsx";
 import Spinner from "./Spinner.jsx";
@@ -17,17 +17,11 @@ function City() {
     const {id} = useParams();
     const {getCity, currentCity, isLoading} = useCities();
 
-
-    // const [searchParams, setSearchParams] = useSearchParams();
-    // const lat = searchParams.get("lat")
-    // const lng = searchParams.get("lng")
-
-
     useEffect(function () {
 
         getCity(id);
 
-    }, [id]);
+    }, [id, getCity]);
 
     // TEMP DATA
 
@@ -68,15 +62,7 @@ function City() {
             </div>
 
             <div>
-
-
-               <BackButton/>
-                {/*<Link to={-1}>*/}
-                {/*    <Button type={"back"}>*/}
-                {/*        Back*/}
-                {/*    </Button>*/}
-                {/*</Link>*/}
-
+                <BackButton/>
             </div>
         </div>
     );
