@@ -1,6 +1,7 @@
 # 🌍 WorldWise
 
-WorldWise is a React application that helps users explore and organize cities they have visited. The project is currently under development as part of my React learning journey.
+WorldWise is a React application that helps users explore and organize cities they have visited. The project is
+currently under development as part of my React learning journey.
 
 ## ✨ Features
 
@@ -59,6 +60,8 @@ http://localhost:9000
 ```
 src/
  ├── components/
+ ├── context/
+ ├── hooks/
  ├── pages/
  ├── App.jsx
  └── main.jsx
@@ -84,14 +87,6 @@ data/
 
 This project is still in progress.
 
-Upcoming features include:
-
-- Add new cities
-- Edit city information
-- Delete cities
-- Interactive map integration
-- Persistent data improvements
-
 ## 📸 Screenshots
 
 Coming soon.
@@ -100,4 +95,9 @@ Coming soon.
 
 **Abolfazl Mohammadi**
 
-GitHub: https://github.com/Abolfazl-Mohammadi-06
+GitHub: https://github.com/Abolfazl-Mohammadi-06/worldwise
+
+## 🙏 Acknowledgments
+
+This project was built while following Jonas Schmedtmann's React course and further extended with my own improvements
+and modifications.
